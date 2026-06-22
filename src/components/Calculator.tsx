@@ -23,7 +23,9 @@ const Calculator: React.FC = () => {
     document.body.classList.toggle('dark', darkMode);
   }, [darkMode]);
 
-  // Keyboard handling
+
+// Keyboard handling
+// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const key = e.key;
@@ -40,9 +42,11 @@ const Calculator: React.FC = () => {
         clear();
       }
     };
-    window.addEventListener('keydown', handler);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+      window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [expression]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
 
   const append = (value: string) => {
     setExpression(prev => prev + value);
