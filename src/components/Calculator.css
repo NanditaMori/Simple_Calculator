@@ -1,0 +1,62 @@
+/* src/components/Calculator.css */
+
+/* Root calculator container – centered, responsive */
+.calculator {
+  width: 92%;
+  max-width: 380px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--bg);
+  color: var(--text);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Toolbar – dark‑mode toggle */
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+}
+
+.toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.toggle:hover {
+  background: var(--border);
+}
+
+/* Grid of calculator buttons */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* No history panel – removed for a cleaner UI */
+
+/* Adjust dark‑mode variables – same as before */
+body.dark {
+  --bg: #1e1e2f;
+  --text: #e0e0ff;
+  --border: #444;
+}
+
+body {
+  --bg: #f9f9ff;
+  --text: #202040;
+  --border: #ccc;
+}

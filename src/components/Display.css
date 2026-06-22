@@ -1,0 +1,31 @@
+/* Display.css */
+.display {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: 'Inter', sans-serif;
+}
+
+.expression {
+  font-size: 1.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.result {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Dark mode overrides */
+body.dark .display {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}

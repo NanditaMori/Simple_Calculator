@@ -1,0 +1,41 @@
+/* Button.css – styles for the reusable calculator button */
+
+/* Base button styles */
+.calc-button {
+  background: var(--btn-bg, #f0f0f0);
+  color: var(--btn-fg, #111);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 0.25rem;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calc-button:hover {
+  background: var(--btn-bg-hover, #e0e0e0);
+}
+
+.calc-button:active {
+  transform: translateY(1px);
+}
+
+/* Dark‑mode overrides */
+body.dark .calc-button {
+  --btn-bg: #333;
+  --btn-fg: #fff;
+  --btn-bg-hover: #444;
+}
+
+/* Special styling for operator buttons */
+.calc-button.operator {
+  background: var(--op-bg, #ff9800);
+  color: var(--op-fg, #fff);
+}
+
+body.dark .calc-button.operator {
+  --op-bg: #ffb74d;
+}
